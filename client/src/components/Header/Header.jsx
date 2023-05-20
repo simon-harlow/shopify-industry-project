@@ -1,11 +1,15 @@
 import React from 'react'
-import { Text } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 
 function Header() {
   return (
-    <div>
+
+    //boiler plate reference for how to use fonts
+
+    <Box bg='$Orange'>
       <Text fontFamily='Montserrat'>Header</Text>
-    </div>
+      <Text fontFamily='titilliumweb'>Some header text</Text>                   
+    </Box>
   )
 }
 
