@@ -1,8 +1,11 @@
 import React from 'react'
+import { Text } from '@chakra-ui/react'
 
 function Header() {
   return (
-    <div>Header</div>
+    <div>
+      <Text fontFamily='Montserrat'>Header</Text>
+    </div>
   )
 }
 
