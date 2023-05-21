@@ -12,6 +12,8 @@ export const themes = extendTheme({
         $DarkSalmon: '#E9967A',
         $Orange: '#FF7F50',
         $White: '#FFFFFF',
+        $Alabaster: '#EDEADE',
+        $Mercury: '#e5e5e5',
 
     },
 
