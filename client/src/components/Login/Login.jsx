@@ -8,7 +8,7 @@ const Login = () => {
 
     const navigate = useNavigate();
 
-    const handleLogin = () => navigate(`/products`)
+    const handleLogin = () => navigate(`/stores`)
 
 
 	return (

@@ -5,8 +5,10 @@ import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import SimpleSidebar from './components/SideBar/SideBar';
 import Login from './components/Login/Login';
+import Stores from './components/Stores/Stores';
 
 import './App.scss';
+
 
 function App() {
 
@@ -17,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/stores" element={<Stores />} />
           </Routes>
         <Footer />
     </BrowserRouter>

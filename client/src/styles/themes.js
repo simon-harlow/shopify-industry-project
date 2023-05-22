@@ -17,6 +17,11 @@ export const themes = extendTheme({
 
     },
 
+    fonts: {
+        body: "Roboto, sans-serif",
+        heading: "Roboto, sans-serif",
+    },
+
     fontSizes: {
 
     },
