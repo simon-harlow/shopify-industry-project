@@ -9,7 +9,10 @@ import {EmailMajor, ProductsMinor} from '@shopify/polaris-icons';
 function SideBar() {
     return (
         <Flex
-            // pos='sticky' may keep
+            position="fixed"
+            left={0}
+            top={12}
+            bottom={0}
             width="240px"
             flexDirection="column"
             bg="$InputBackground"

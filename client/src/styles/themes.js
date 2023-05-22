@@ -20,6 +20,11 @@ export const themes = extendTheme({
         $Yellow: '#FFC96B',
     },
 
+    fonts: {
+        body: "Roboto, sans-serif",
+        heading: "Roboto, sans-serif",
+    },
+
     fontSizes: {
 
     },
