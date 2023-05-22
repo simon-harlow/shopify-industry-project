@@ -9,6 +9,7 @@ import Stores from './components/Stores/Stores';
 import Courses from './components/Courses/Courses';
 
 import './App.scss';
+import ProductsPage from './components/Products/Products';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/stores" element={<Stores />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/products" element={<ProductsPage/>} />
           </Routes>
         </Box>
     </BrowserRouter>
