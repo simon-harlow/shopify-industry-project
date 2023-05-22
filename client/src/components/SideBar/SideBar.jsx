@@ -6,11 +6,13 @@ import { ChevronRightIcon } from '@chakra-ui/icons';
 function SideBar() {
     return (
         <Flex
-            pos='sticky'
-            h='95vh'
-            width="250px"
+            position="fixed"
+            left={0}
+            top={12}
+            bottom={0}
+            width="240px"
             flexDirection="column"
-            bg="$Mercury"
+            bg="$InputBackground"
         >   
             <Select placeholder='Vandelay Industries' size="sm"  width="220px" fontSize="13px" alignSelf="center" marginY="1rem" borderColor="black">
                 <option value='option1'>Option 1</option>
