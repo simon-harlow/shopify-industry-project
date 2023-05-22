@@ -1,7 +1,10 @@
-import { Flex, Text, Menu, Link, MenuButton, Icon, Select, Button} from '@chakra-ui/react';
+import { Flex, Text, Menu, Link, MenuButton,  Select, Icon } from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
 import React from 'react';
-import { Home_icon } from '../../assets/modifiedIcon';
+import { AnalyticsShopify, CustomersShopify, DiscountsShopify, EmailShopify, FinancesShopify, FlowShopify, HomeShopify, MarketingShopify, OnlineStoreShopify, OrdersShopify, PointOfSalesShopify, ProductsShopify, SearchShopify, ShopMinorShopify } from '../../assets/modifiedIcon';
 import { ChevronRightIcon } from '@chakra-ui/icons';
+import {EmailMajor, ProductsMinor} from '@shopify/polaris-icons';
+
 
 function SideBar() {
     return (
@@ -20,53 +23,60 @@ function SideBar() {
                 <option value='option3'>Option 3</option>
             </Select>
             <Flex flexDirection="column">
-                <NavItem icon={Home_icon} title={"Home"}/>
-                <NavItem icon={Home_icon} title={"Orders"}/>
-                <NavItem icon={Home_icon} title={"Products"}/>
-                <NavItem icon={Home_icon} title={"Customers"}/>
-                <NavItem icon={Home_icon} title={"Finances"}/>
-                <NavItem icon={Home_icon} title={"Analytics"}/>
-                <NavItem icon={Home_icon} title={"Marketing"}/>
-                <NavItem icon={Home_icon} title={"Discounts"}/>
+                <NavItem icon={HomeShopify} title={"Home"} link={"/home"}/>
+                <NavItem icon={OrdersShopify} title={"Orders"} link={"/orders"}/>
+                <NavItem icon={ProductsShopify} title={"Products"} link={"/products"}/>
+                <NavItem icon={CustomersShopify} title={"Customers"} link={"/customers"}/>
+                <NavItem icon={FinancesShopify} title={"Finances"} link={"/finances"}/>
+                <NavItem icon={AnalyticsShopify} title={"Analytics"} link={"/analytics"} />
+                <NavItem icon={MarketingShopify} title={"Marketing"} link={"/marketing"}/>
+                <NavItem icon={DiscountsShopify} title={"Discounts"} link={"/discounts"}/>
             </Flex>
-            <Flex  flexDirection="column">
-                <Link href='' marginX="1rem" flexDirection="row" display="flex" alignItems="center" justifyContent="space-between">
-                    <Text>Sales channels </Text>
+            <Flex flexDirection="column">
+                <Link as={NavLink} to={"/saleschannels"} marginX="1rem" flexDirection="row" display="flex" alignItems="center" justifyContent="space-between">
+                    <Text textColor="$NavHeaderText" fontSize="12px" lineHeight="16px">Sales channels </Text>
                     <ChevronRightIcon />
                 </Link>
-                <NavItem icon={Home_icon} title={"Online Store"}/>
-                <NavItem icon={Home_icon} title={"Point of Sale"}/>
-                <NavItem icon={Home_icon} title={"Shop"}/>
+                <NavItem icon={OnlineStoreShopify} title={"Online Store"} link={"/onlinestore"}/>
+                <NavItem icon={PointOfSalesShopify} title={"Point of Sale"} link={"/pointofsales"}/>
+                <NavItem icon={ShopMinorShopify} title={"Shop"} link={"/shop"}/>
 
             </Flex>
             <Flex  flexDirection="column">
-                <Link href='' marginX="1rem" flexDirection="row" display="flex" alignItems="center" justifyContent="space-between">
-                    <Text>Apps</Text>
+                <Link as={NavLink} to={"/apps"} marginX="1rem" flexDirection="row" display="flex" alignItems="center" justifyContent="space-between">
+                    <Text textColor="$NavHeaderText" fontSize="12px" lineHeight="16px">Apps</Text>
                     <ChevronRightIcon />
                 </Link>
-                <NavItem icon={Home_icon} title={"Online Store"}/>
-                <NavItem icon={Home_icon} title={"Point of Sale"}/>
-                <NavItem icon={Home_icon} title={"Shop"}/>
+                <NavItem icon={EmailShopify} title={"Shopify Email"}  link={"/shopifyemail"}/>
+                <NavItem icon={SearchShopify} title={"Shopify Search &"}  link={"/shopifysearch"}/>
+                <NavItem icon={FlowShopify} title={"Shopify Flow"} link={"/shopifyflow"}/>
             </Flex>
         </Flex>
     )
 }
 export default SideBar;
 
-function NavItem({icon, title}){
+    function NavItem({icon, title, link}){
     return(
         <Flex
             flexDirection="column"
             width="100%"
             alignItems={"flex-start"}
-            padding="0.1rem 1rem"
         >
-            <Menu>
-                <Link>
+            <Menu width="100%">
+                <Link 
+                    width="100%"
+                    as={NavLink} to={link} textColor={"$IconGrey"}
+                    _activeLink={{
+                        textColor:"$ShopifyGreen",
+                        backgroundColor:"NavHover"
+                        }}
+                
+                >
                 <MenuButton>
                     <Flex alignItems="center">
-                        <Icon as={icon} marginRight=".25rem"/>
-                        <Text>{title}</Text>
+                        <Icon as={icon} marginLeft="1rem" marginRight="11px"/>
+                        <Text lineHeight="20px" fontWeight="500" fontSize="14px" >{title}</Text>
                     </Flex>
                 </MenuButton>
                 </Link>

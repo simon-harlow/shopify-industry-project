@@ -8,13 +8,16 @@ export const themes = extendTheme({
         xl: '1280px',
     },
     colors: {
-        $LightCoral: '#FA8072',
-        $DarkSalmon: '#E9967A',
-        $Orange: '#FF7F50',
-        $White: '#FFFFFF',
-        $Alabaster: '#EDEADE',
-        $Mercury: '#e5e5e5',
+        $Grey: '#828899',
+        $NavText: '#202223',
 
+        $NavHover: '#EDEEEF',
+        $IconGrey: '#5C5F62', //bell and text
+        $NavHeaderText: '#6D7175',
+        $ShopifyGreen: '#008060',
+        $InputBackground: '#E4E5E7',
+
+        $Yellow: '#FFC96B',
     },
 
     fonts: {

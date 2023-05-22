@@ -9,10 +9,10 @@ function Header() {
 
     //boiler plate reference for how to use fonts
 
-    <Flex bg='white' h={12} alignItems='center' width="100%" padding="0 1rem" justifyContent="space-between">
+    <Flex bg='white' h={"56px"} alignItems='center' width="100%" padding="0 1rem" justifyContent="space-between">
       
         <Image src={logo} alt='Shopify Logo' bg='white' width='auto' h={12} />
-        <InputGroup borderRadius={5} size="sm" width='400px' bg='$Mercury'>
+        <InputGroup borderRadius={5} size="sm" width='40%' bg="$InputBackground" >
         <InputLeftElement
           pointerEvents="none"
           children={<SearchIcon color="gray.600" />}
@@ -20,8 +20,8 @@ function Header() {
         <Input type="text" placeholder="Search..." border="1px solid #949494" borderRadius='5px'/>
       </InputGroup>
       <HStack>
-      <BellIcon w={6} h={6} color="red"/>  
-      <Button borderRadius='50px' bg="yellow" padding='0px'>XA</Button>
+      <BellIcon w="24px" height="29px" color="$IconGrey"/>  
+      <Button borderRadius='40px' bg="$Yellow" padding='0px'>XA</Button>
       <Text fontSize="1rem">Xquenda Andreev</Text>
       </HStack>
 
