@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import SimpleSidebar from './components/SideBar/SideBar';
+import Login from './components/Login/Login';
 
 import './App.scss';
 
@@ -14,7 +15,8 @@ function App() {
         <Header />
         <SimpleSidebar/>
           <Routes>
-            {/* <Route /> */}
+            <Route path="/" element={<Navigate to="/login" />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         <Footer />
     </BrowserRouter>
