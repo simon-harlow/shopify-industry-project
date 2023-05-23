@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import React from 'react';
 import { AnalyticsShopify, CustomersShopify, DiscountsShopify, EmailShopify, FinancesShopify, FlowShopify, HomeShopify, MarketingShopify, OnlineStoreShopify, OrdersShopify, PointOfSalesShopify, ProductsShopify, SearchShopify, ShopMinorShopify } from '../../assets/modifiedIcon';
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import {EmailMajor, ProductsMinor} from '@shopify/polaris-icons';
 
 
 function SideBar() {
@@ -11,7 +10,7 @@ function SideBar() {
         <Flex
             position="fixed"
             left={0}
-            top={12}
+            top={14}
             bottom={0}
             width="240px"
             flexDirection="column"

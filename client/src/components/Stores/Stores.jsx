@@ -2,7 +2,9 @@ import React from 'react'
 import { useNavigate } from "react-router-dom"
 import { Box, Button, Card, Flex, Text } from "@chakra-ui/react";
 import { ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
+
 import Logo from "../../assets/images/shopify_logo_whitebg.svg"
+import { OnlineStoreShopify } from "../../assets/modifiedIcon"
 
 function Stores() {
     
@@ -76,16 +78,16 @@ function Stores() {
                     _hover={{ boxShadow: "xl" }}
                     >
                     <Flex align="center">
-                        <Box
-                            display="flex"
-                            justifyContent="center"
-                            alignItems="center"
+                        <Flex
+                            justify="center"
+                            align="center"
                             bg="#D9D9D9"
                             borderRadius="full"
                             width="2.5rem"
                             height="2.5rem"
                         >
-                        </Box>
+                            <OnlineStoreShopify boxSize={6} pl={1} />
+                        </Flex>
                         <Flex direction="column" ml={4}>
                                 <Text fontSize="md" as="b">My Store</Text>
                                 <Text fontSize="xs" color="#828899">32.33b-3.myshopify.com</Text>
