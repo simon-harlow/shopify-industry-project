@@ -11,7 +11,7 @@ function SideBar() {
         <Flex
             position="fixed"
             left={0}
-            top={12}
+            top={14}
             bottom={0}
             width="240px"
             flexDirection="column"
