@@ -11,6 +11,7 @@ import ProductsPage from './components/Products/Products';
 import CoursesList from './components/CoursesList/CoursesList';
 import EditCourse from './components/EditCourse/EditCourse';
 import NewModule from './components/NewModule/NewModule';
+import Stores from './components/Stores/Stores'
 import './App.scss';
 
 
