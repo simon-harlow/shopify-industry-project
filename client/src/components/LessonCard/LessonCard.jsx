@@ -4,13 +4,8 @@ import illustration from '../../assets/images/Checkered.png'
 import { NavLink } from "react-router-dom";
 
 
-const ModuleCard = ({name, start})=>{
+const LessonCard = ({name})=>{
 
-    let trimmedname = name;
-    let trimmedstart = start;
-    trimmedname = trimmedname.replace(/\s/g, '');
-    trimmedstart = trimmedstart.replace(/\s/g, '');
-    let combinedLink = trimmedname+ "/" + trimmedstart;
 
     return (
         <Card
@@ -32,14 +27,14 @@ const ModuleCard = ({name, start})=>{
                         </Text>
                         </Link>
                         </Flex>
-                        <Text mb={4}>{start}</Text>
+                        <Text mb={4}>something</Text>
                         <Flex gap="1rem" justifyContent="space-between">
                         
                             <Button color="white" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem" border="1px solid black" padding="0 1rem" borderRadius="5px" bg="$ShopifyGreen" >
                                 Publish
                             </Button>                            
                        
-                        <Link as={NavLink} to={combinedLink}>
+                        <Link as={NavLink} >
                             <Button color="black" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem"  padding="0 1rem" borderRadius="5px" bg="transparent">
                                 Draft
                             </Button> 
@@ -52,4 +47,4 @@ const ModuleCard = ({name, start})=>{
         );
 }
 
-export default ModuleCard;
+export default LessonCard;

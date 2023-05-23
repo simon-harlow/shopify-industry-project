@@ -1,18 +1,63 @@
 [
   {
     "name": "module 1",
-    "start": "Jan 1"
+    "start": "Jan 1",
+    "lessons": [
+      {
+        "lessonName": "random lesson",
+        "TypeOfTask": "",
+        "TitleOfLecture": "",
+        "Duration": "",
+        "Material": ""
+      },
+      {
+        "lessonName": "another lessson",
+        "TypeOfTask": "",
+        "TitleOfLecture": "",
+        "Duration": "",
+        "Material": ""
+      },
+      {
+        "lessonName": "lesson something something",
+        "TypeOfTask": "",
+        "TitleOfLecture": "",
+        "Duration": "",
+        "Material": ""
+      },
+      {
+        "lessonName": "adding another lesson",
+        "TypeOfTask": "",
+        "TitleOfLecture": "",
+        "Duration": "",
+        "Material": ""
+      },
+      {
+        "lessonName": "another what what what",
+        "TypeOfTask": "",
+        "TitleOfLecture": "",
+        "Duration": "",
+        "Material": ""
+      }
+    ]
   },
   {
     "name": "module 2",
-    "start": "Jan 3"
+    "start": "Jan 3",
+    "lessons": []
   },
   {
     "name": "module 3",
-    "start": "Jan 10"
+    "start": "Jan 10",
+    "lessons": []
   },
   {
     "name": "module 4",
-    "start": "Jan 23"
+    "start": "Jan 23",
+    "lessons": []
+  },
+  {
+    "name": "module 5",
+    "date": "Feb 1",
+    "lessons": []
   }
 ]

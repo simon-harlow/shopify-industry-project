@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { readDetailedData, addMod } = require('../utils/helpers');
+const { readDetailedData, addMod, addLessons, findModuleIndex } = require('../utils/helpers');
 
 
 // Express route handler with URL: '/editMod' and a handler function
@@ -10,6 +10,14 @@ router
     .post('/', (req, res) =>{const { name, start} = req.body;
         addMod(name, start);
         res.status(201).end();
+    })
+    .post('/addlessons', (req, res) =>{const { lesson, name} = req.body;
+        addLessons(lesson, name);
+        let detailedData = readDetailedData();
+        let search = name;
+        search = search.replace( /[^0-9](?=[0-9])/g, '$& ');
+        let moduleIndex = findModuleIndex(search);
+        res.status(201).send(detailedData[moduleIndex].lessons);
     });
 
 module.exports = router;
