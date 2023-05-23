@@ -27,8 +27,10 @@ router
     let moduleIndex = findModuleIndex(search);
     res.status(201).send(detailedData[moduleIndex].lessons);
     })
-    .post('/:name/:start/', (req, res) =>{const { lesson, name} = req.body;
-        addLessons(lesson, name);
+    .post('/:name/:start/', (req, res) =>{
+        const { task, lessonName} = req.body;
+        const {name, start} = req.params;
+        addTask(task, lessonName);
         let detailedData = readDetailedData();
         let search = name;
         search = search.replace( /[^0-9](?=[0-9])/g, '$& ');
