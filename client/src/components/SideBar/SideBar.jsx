@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import React from 'react';
 import { AnalyticsShopify, CustomersShopify, DiscountsShopify, EmailShopify, FinancesShopify, FlowShopify, HomeShopify, MarketingShopify, OnlineStoreShopify, OrdersShopify, PointOfSalesShopify, ProductsShopify, SearchShopify, ShopMinorShopify } from '../../assets/modifiedIcon';
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import {EmailMajor, ProductsMinor} from '@shopify/polaris-icons';
 
 
 function SideBar() {

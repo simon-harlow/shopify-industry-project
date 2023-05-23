@@ -6,11 +6,13 @@ import Header from "./components/Header/Header"
 import SimpleSidebar from './components/SideBar/SideBar';
 import Login from './components/Login/Login';
 import Courses from './components/Courses/Courses';
+import CourseForm from './components/CoursesForm/CourseForm';
 import ProductsPage from './components/Products/Products';
 import CoursesList from './components/CoursesList/CoursesList';
-import './App.scss';
 import EditCourse from './components/EditCourse/EditCourse';
 import NewModule from './components/NewModule/NewModule';
+import './App.scss';
+
 
 
 function App() {
@@ -23,6 +25,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/stores" element={<Stores />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/courses/new" element={<CourseForm />} />
             <Route exact path="/courses" element={<Courses />} />
             <Route path="/listcourses" element={<CoursesList />} />
             <Route path="/editCourse" element={<EditCourse />} />
