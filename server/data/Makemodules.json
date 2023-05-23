@@ -37,13 +37,28 @@
         "TitleOfLecture": "",
         "Duration": "",
         "Material": ""
+      },
+      {
+        "lessonName": "module 1",
+        "TypeOfTask": "",
+        "TitleOfLecture": "",
+        "Duration": "",
+        "Material": ""
       }
     ]
   },
   {
     "name": "module 2",
     "start": "Jan 3",
-    "lessons": []
+    "lessons": [
+      {
+        "lessonName": "potato",
+        "TypeOfTask": "",
+        "TitleOfLecture": "",
+        "Duration": "",
+        "Material": ""
+      }
+    ]
   },
   {
     "name": "module 3",
@@ -57,7 +72,7 @@
   },
   {
     "name": "module 5",
-    "date": "Feb 1",
+    "start": "Feb 1",
     "lessons": []
   }
 ]

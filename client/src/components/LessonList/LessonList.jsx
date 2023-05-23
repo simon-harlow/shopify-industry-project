@@ -8,11 +8,11 @@ const LessonList = ({list }) =>{
 
     return(
 
-            <Flex gap="1rem" >
+            <Flex gap="1rem" flexDirection="column">
                 {list.map((ex) =>(
                         <LessonCard
                             key={ex.lessonName}
-                            name={ex.lessonName}
+                            lessonName={ex.lessonName}
                         />
                 ))}
             </Flex>

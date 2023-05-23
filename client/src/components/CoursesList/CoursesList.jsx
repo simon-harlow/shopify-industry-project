@@ -31,7 +31,7 @@ function CoursesList() {
                         <option value='option2'>Option 2</option>
                         <option value='option3'>Option 3</option>
                     </Select>
-                    <Link as={NavLink} to="/newModule">
+                    <Link as={NavLink} to="/courses/new">
                         <Button textAlign="center" bg="$ShopifyGreen" color="white">+ Add New Courses</Button>
                     </Link>
                 </Flex>

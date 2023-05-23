@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import { Flex, Button, Card, Text, Image, Box, Link, Select, Modal, FormLabel, Input, FormControl, FormHelperText, FormErrorMessage,
     ModalContent,
@@ -12,7 +12,7 @@ import LessonList from "../LessonList/LessonList";
 
 
 
-function NewModule() {
+function NewLesson() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const { name, start } = useParams();
     const [lessonList, setLessonList] = useState([]);
@@ -28,7 +28,6 @@ function NewModule() {
             Duration:"",
             Material:""
         }
-
 
         if(lessonName.trim()  !== "" ){
             post = {
@@ -48,13 +47,24 @@ function NewModule() {
             alert(" has successfully been uploaded");
         }
     }
-
+    
+    useEffect(()=>{
+        axios
+          .get(`http://localhost:8080/editCourse/${name}/${start}`)
+          .then((response) => {
+            setLessonList(response.data);
+            console.log(response.data);
+          })
+          .catch((err) => {
+            console.log('Error fetching expenses:', err);
+          });
+    },[]);
 
 	return (
         <Flex direction="column">
             <Flex justifyContent="space-between" borderBottom="1px solid grey" paddingBottom="20px" marginBottom="20px">
                 <Flex>
-                    <Link as={NavLink} to="/listcourses" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon/> </Link> 
+                    <Link as={NavLink} to="/editCourse" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon/> </Link> 
                     <Flex direction="column" alignSelf="center">
                         <Text  fontWeight="700" fontSize="20px" lineHeight="24px">{name}</Text>
                         <Text  fontWeight="700" fontSize="20px" lineHeight="24px">{start}</Text>
@@ -114,4 +124,4 @@ function NewModule() {
     )
     };
 
-export default NewModule;
+export default NewLesson;
