@@ -22,7 +22,7 @@ function App() {
     <BrowserRouter>
         <Header />
         <SimpleSidebar/>
-        <Box flex="1" ml="240px" p="3rem" bg="$InputBackground" height="1080px">
+        <Box flex="1" ml="240px" p="1rem" bg="$InputBackground" height="1080px">
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />
             <Route path="/login" element={<Login />} />
@@ -32,6 +32,7 @@ function App() {
             <Route exact path="/courses" element={<Courses />} />
             <Route path="/listcourses" element={<CoursesList />} />
             <Route path="/editCourse" element={<EditCourse />} />
+            <Route path="/editCourse/:name/:start" element={<NewModule />} />
             <Route path="/products" element={<ProductsPage/>} />
             <Route path="/newModule" element={<NewModule/>} />
           </Routes>

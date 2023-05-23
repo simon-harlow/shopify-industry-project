@@ -8,7 +8,6 @@ import HandMade from "../../assets/images/HomeMadeandCrafts.png"
 import Print from "../../assets/images/PrintOnDemand.png"
 
 
-
 const ProductsPage = () => {
 
     return(
@@ -21,8 +20,6 @@ const ProductsPage = () => {
                 <ProductItem img={CoursesImg}  title={"Courses"} link={'/courses'}/>
             </HStack>
         </Flex>
-
-
     );
 
 }

@@ -1,12 +1,21 @@
-import React from "react";
-import { Flex, Button, Card, Text, Image, Link, Select } from "@chakra-ui/react";
+import React, {useRef } from "react";
+import { Flex, Button, Card, Text, Image, Link, Select,   Modal, 
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton, ModalOverlay, useDisclosure } from "@chakra-ui/react";
 import {ArrowBackIcon} from '@chakra-ui/icons'
 import { NavLink } from "react-router-dom";
 import checked from '../../assets/images/Checkered.png'
 
 function CoursesList() {
+    
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const finalRef = useRef(null)
 
 	return (
+        <>
         <Flex direction="column">
             <Flex justifyContent="space-between" borderBottom="1px solid grey" paddingBottom="20px" marginBottom="20px">
                 <Flex>
@@ -41,23 +50,50 @@ function CoursesList() {
                         <Text fontSize="xl" fontWeight="bold" mb={2}>
                             Begin Language Course
                         </Text>
+                        <Link as={NavLink} to="/editCourse">
                         <Text fontSize="xl" fontWeight="bold" mb={2}>
                             ...
                         </Text>
+                        </Link>
                         </Flex>
                         <Text mb={4}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
-                    <Flex gap="1rem">
-                        <Link as={NavLink} to="/editCourse" color="black" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem" border="1px solid black" padding="0 1rem" borderRadius="5px">
-                            Edit
-                        </Link>
-                        <Link  color="blue" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem">
-                            Unpublished
-                        </Link>
+                    <Flex gap="1rem" justifyContent="space-between">
+                        
+                            <Button color="white" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem" border="1px solid black" padding="0 1rem" borderRadius="5px" bg="$ShopifyGreen" onClick={onOpen}>
+                                Publish
+                            </Button>                            
+                       
+                        
+                            <Button color="black" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem"  padding="0 1rem" borderRadius="5px" bg="transparent">
+                                Draft
+                            </Button> 
+                       
                     </Flex>
                 </Flex>
             </Flex>
         </Card>
         </Flex>
+
+        
+        <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose} variant="wide">
+            <ModalOverlay />
+            <ModalContent>
+            <ModalHeader borderBottom="1px solid black">Would you like to publish the following course?</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody borderBottom="1px solid black"> 
+                Beginner Language Courses
+                
+            </ModalBody>
+
+            <ModalFooter>
+                <Button  mr={3} onClick={onClose}>
+                No, Go back
+                </Button>
+                <Button color="white" bg="$ShopifyGreen">Yes, Publish</Button>
+            </ModalFooter>
+            </ModalContent>
+        </Modal>
+        </>
 	);
 }
 
