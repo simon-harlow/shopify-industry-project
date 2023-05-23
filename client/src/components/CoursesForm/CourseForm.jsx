@@ -1,6 +1,6 @@
 import React from "react";
-import { useNavigate, NavLink, Link } from "react-router-dom"
-import { Box, Flex, FormControl, FormLabel, Select, Button, Text } from '@chakra-ui/react';
+import { useNavigate, NavLink } from "react-router-dom"
+import { Box, Flex, FormControl, FormLabel, Select, Button, Text, Link } from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons'
 
 
@@ -13,7 +13,7 @@ function CourseForm() {
         <>
             <Flex justifyContent="space-between" align="baseline" borderBottom="1px solid grey" paddingBottom="20px" marginBottom="20px">
                 <Flex>
-                    <Link as={NavLink} to="/home" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon boxSize={6} mr={3}/> </Link> 
+                    <Link as={NavLink} to="/products" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon /> </Link> 
                     <Flex direction="column" alignSelf="center">
                         <Text fontWeight="bold" fontSize="20px" lineHeight="24px">Courses</Text>
                     </Flex>
@@ -38,7 +38,7 @@ function CourseForm() {
                     boxShadow="md"
                     bg="white"
                 >
-                    <Flex direction="column" justify="center" mb={4} px="2rem" pb="1rem" borderBottom="1px solid #AEB4B9">
+                    <Flex direction="column" justify="center" px="2rem" pb="1rem" borderBottom="1px solid #AEB4B9">
                         <Text fontSize="xl" fontWeight="bold">
                             Name of Course
                         </Text>
@@ -47,7 +47,7 @@ function CourseForm() {
                         </Text>
                     </Flex>
 
-                    <Box mb={4} px="2rem" py="1rem" borderBottom="1px solid #AEB4B9">
+                    <Box px="2rem" py="1rem" borderBottom="1px solid #AEB4B9">
                         <FormControl>
                             <FormLabel>Type Of Course</FormLabel>
                             <Select w="50%" focusBorderColor="#008060">
@@ -56,14 +56,14 @@ function CourseForm() {
                         </FormControl>
                     </Box>
 
-                    <Box mb={4} px="2rem" py="1rem" borderBottom="1px solid #AEB4B9">
+                    <Box px="2rem" py="1rem" borderBottom="1px solid #AEB4B9">
                         <FormControl>
                             <FormLabel>Start Date</FormLabel>
                             <Text>{new Date().toLocaleString('en-US', {day: '2-digit', month: '2-digit', year: 'numeric'})}</Text>
                         </FormControl>
                     </Box>
 
-                    <Box mb={4} px="2rem" py="1rem" borderBottom="1px solid #AEB4B9">
+                    <Box px="2rem" py="1rem" borderBottom="1px solid #AEB4B9">
                         <FormControl>
                             <FormLabel>Type of Access</FormLabel>
                             <Select w="50%" focusBorderColor="#008060">
@@ -72,7 +72,7 @@ function CourseForm() {
                         </FormControl>
                     </Box>
 
-                    <Flex justifyContent="flex-end" px="2rem">
+                    <Flex justifyContent="flex-end" px="2rem" pt="1rem">
                         <Button variant="outline" mr={2} cursor="default" _hover={{bg: ""}}>
                             Back
                         </Button>

@@ -1,6 +1,6 @@
 import React from "react";
-import { useNavigate, NavLink, Link } from "react-router-dom"
-import { Flex, Button, Card, Text, Select } from "@chakra-ui/react";
+import { useNavigate, NavLink } from "react-router-dom"
+import { Flex, Button, Card, Text, Select, Link } from "@chakra-ui/react";
 import { ArrowBackIcon } from '@chakra-ui/icons'
 
 function Courses() {
@@ -12,7 +12,7 @@ function Courses() {
         <>
             <Flex justifyContent="space-between" align="baseline" borderBottom="1px solid grey" paddingBottom="20px" marginBottom="20px">
                 <Flex>
-                    <Link as={NavLink} to="/home" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon boxSize={6} mr={3}/> </Link> 
+                    <Link as={NavLink} to="/products" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon /> </Link> 
                     <Flex direction="column" alignSelf="center">
                         <Text fontWeight="bold" fontSize="20px" lineHeight="24px">Courses</Text>
                     </Flex>
