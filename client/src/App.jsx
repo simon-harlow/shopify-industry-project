@@ -5,11 +5,15 @@ import { Box } from '@chakra-ui/react';
 import Header from "./components/Header/Header"
 import SimpleSidebar from './components/SideBar/SideBar';
 import Login from './components/Login/Login';
-import Stores from './components/Stores/Stores';
 import Courses from './components/Courses/Courses';
 import CourseForm from './components/CoursesForm/CourseForm';
-
+import ProductsPage from './components/Products/Products';
+import CoursesList from './components/CoursesList/CoursesList';
+import EditCourse from './components/EditCourse/EditCourse';
+import NewModule from './components/NewModule/NewModule';
 import './App.scss';
+
+
 
 function App() {
 
@@ -24,6 +28,11 @@ function App() {
             <Route path="/stores" element={<Stores />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/new" element={<CourseForm />} />
+            <Route exact path="/courses" element={<Courses />} />
+            <Route path="/listcourses" element={<CoursesList />} />
+            <Route path="/editCourse" element={<EditCourse />} />
+            <Route path="/products" element={<ProductsPage/>} />
+            <Route path="/newModule" element={<NewModule/>} />
           </Routes>
         </Box>
     </BrowserRouter>
