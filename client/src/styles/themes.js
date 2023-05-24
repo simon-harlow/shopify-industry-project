@@ -30,7 +30,18 @@ export const themes = extendTheme({
     },
     lineHeights: {
 
-    },                                    //commenting out because this is boilerplate code
+    },  
+    components: {
+        Modal: {
+          baseStyle: (props) => ({
+            dialog: {
+              maxWidth: ["50%", "50%", "50%"],
+              minWidth: "50%",
+              bg: "white"
+            }
+          })
+        }
+      }                                  //commenting out because this is boilerplate code
     // components: {
     //     Heading: {
     //         baseStyle: {
