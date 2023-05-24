@@ -10,7 +10,7 @@ function Stores() {
     
     const navigate = useNavigate();
 
-    const handleStoreClick = () => navigate(`/home`)
+    const handleStoreClick = () => navigate(`/products`)
 
 
 	return (
@@ -21,7 +21,7 @@ function Stores() {
             width="100vw"
             height="100vh"
             zIndex={9999}
-            bg="#008060"
+            bg="$ShopifyGreen"
             display="flex"
             justifyContent="center"
             alignItems="center"
@@ -49,7 +49,7 @@ function Stores() {
                         display="flex"
                         justifyContent="center"
                         alignItems="center"
-                        bg="#FFC96B"
+                        bg="$Yellow"
                         borderRadius="full"
                         width="1.5rem"
                         height="1.5rem"
@@ -65,7 +65,7 @@ function Stores() {
                     <Text as="b" fontSize={30}>
                         Stores
                     </Text>
-                    <Button bg="#008060" color="white" cursor="default" _hover={{bg: ""}} boxShadow="md">
+                    <Button bg="$ShopifyGreen" color="white" cursor="default" _hover={{bg: ""}} boxShadow="md">
                         Create another store
                     </Button>
                 </Flex>
@@ -90,7 +90,7 @@ function Stores() {
                         </Flex>
                         <Flex direction="column" ml={4}>
                                 <Text fontSize="md" as="b">My Store</Text>
-                                <Text fontSize="xs" color="#828899">32.33b-3.myshopify.com</Text>
+                                <Text fontSize="xs" color="$Grey">32.33b-3.myshopify.com</Text>
                         </Flex>
                         <ChevronRightIcon ml="auto" boxSize={6}/>
                     </Flex>
