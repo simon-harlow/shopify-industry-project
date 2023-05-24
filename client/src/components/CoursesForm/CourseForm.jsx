@@ -20,7 +20,7 @@ function CourseForm() {
                 </Flex>
                 <Flex gap="1rem">
                     <Button textAlign="center" bg="transparent" fontWeight="700" cursor="default" _hover={{bg: ""}}>Edit</Button>
-                    <Select placeholder='More action' width="200px" fontWeight="700" focusBorderColor="#008060">
+                    <Select placeholder='More action' width="200px" fontWeight="700" focusBorderColor="$ShopifyGreen">
                         <option value='option1'>Option 1</option>
                         <option value='option2'>Option 2</option>
                         <option value='option3'>Option 3</option>
@@ -50,7 +50,7 @@ function CourseForm() {
                     <Box px="2rem" py="1rem" borderBottom="1px solid #AEB4B9">
                         <FormControl>
                             <FormLabel>Type Of Course</FormLabel>
-                            <Select w="50%" focusBorderColor="#008060">
+                            <Select w="50%" focusBorderColor="$ShopifyGreen">
                                 <option>Language</option>
                             </Select>
                         </FormControl>
@@ -66,7 +66,7 @@ function CourseForm() {
                     <Box px="2rem" py="1rem" borderBottom="1px solid #AEB4B9">
                         <FormControl>
                             <FormLabel>Type of Access</FormLabel>
-                            <Select w="50%" focusBorderColor="#008060">
+                            <Select w="50%" focusBorderColor="$ShopifyGreen">
                                 <option>Paid</option>
                             </Select>
                         </FormControl>
@@ -76,7 +76,7 @@ function CourseForm() {
                         <Button variant="outline" mr={2} cursor="default" _hover={{bg: ""}}>
                             Back
                         </Button>
-                        <Button bg="#008060" color="white" _hover={{bg: "", boxShadow: "lg"}} boxShadow="md" onClick={handleCreateCourseClick}>
+                        <Button bg="$ShopifyGreen" color="white" _hover={{bg: "", boxShadow: "lg"}} boxShadow="md" onClick={handleCreateCourseClick}>
                             Create Course
                         </Button>
                     </Flex>

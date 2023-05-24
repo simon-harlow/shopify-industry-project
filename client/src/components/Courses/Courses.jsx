@@ -19,7 +19,7 @@ function Courses() {
                 </Flex>
                 <Flex gap="1rem">
                     <Button textAlign="center" bg="transparent" fontWeight="700" cursor="default" _hover={{bg: ""}}>Edit</Button>
-                    <Select placeholder='More action' width="200px" fontWeight="700" focusBorderColor="#008060">
+                    <Select placeholder='More action' width="200px" fontWeight="700" focusBorderColor="$ShopifyGreen">
                         <option value='option1'>Option 1</option>
                         <option value='option2'>Option 2</option>
                         <option value='option3'>Option 3</option>
@@ -37,8 +37,8 @@ function Courses() {
                     <Text fontSize="16px" fontWeight="bold" mb={2}>
                         Course Name
                     </Text>
-                    <Text mb={4} fontSize="sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
-                    <Button bg="#008060" color="white" _hover={{bg: "", boxShadow: "lg"}} boxShadow="md" w="fit-content" h="2rem" onClick={handleAddCourseClick}>
+                    <Text mb={4} fontSize="sm">Start setting up your new course here! Add modules, lessons, tasks for your students.</Text>
+                    <Button bg="$ShopifyGreen" color="white" _hover={{bg: "", boxShadow: "lg"}} boxShadow="md" w="fit-content" h="2rem" onClick={handleAddCourseClick}>
                         Add New Course
                     </Button>
                 </Flex>

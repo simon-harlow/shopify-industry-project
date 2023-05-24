@@ -16,22 +16,19 @@ function SideBar() {
             flexDirection="column"
             bg="$InputBackground"
         >   
-            <Select placeholder='Vandelay Industries' size="sm"  width="220px" fontSize="13px" alignSelf="center" marginY="1rem" borderColor="black">
-                <option value='option1'>Option 1</option>
-                <option value='option2'>Option 2</option>
-                <option value='option3'>Option 3</option>
+            <Select placeholder='Xquenda’s Academy' size="sm"  width="220px" fontSize="13px" alignSelf="center" marginY="1rem" borderColor="black" focusBorderColor="$ShopifyGreen">
             </Select>
-            <Flex flexDirection="column">
+            <Flex flexDirection="column" mb="1rem">
                 <NavItem icon={HomeShopify} title={"Home"} link={"/home"}/>
                 <NavItem icon={OrdersShopify} title={"Orders"} link={"/orders"}/>
-                <NavItem icon={ProductsShopify} title={"Products"} link={"/products"}/>
+                <NavItem icon={ProductsShopify} title={"Products"} link={"/products"} />
                 <NavItem icon={CustomersShopify} title={"Customers"} link={"/customers"}/>
                 <NavItem icon={FinancesShopify} title={"Finances"} link={"/finances"}/>
                 <NavItem icon={AnalyticsShopify} title={"Analytics"} link={"/analytics"} />
                 <NavItem icon={MarketingShopify} title={"Marketing"} link={"/marketing"}/>
                 <NavItem icon={DiscountsShopify} title={"Discounts"} link={"/discounts"}/>
             </Flex>
-            <Flex flexDirection="column">
+            <Flex flexDirection="column" mb="1rem">
                 <Link as={NavLink} to={"/saleschannels"} marginX="1rem" flexDirection="row" display="flex" alignItems="center" justifyContent="space-between">
                     <Text textColor="$NavHeaderText" fontSize="12px" lineHeight="16px">Sales channels </Text>
                     <ChevronRightIcon />

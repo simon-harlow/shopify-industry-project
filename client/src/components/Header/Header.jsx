@@ -17,7 +17,7 @@ function Header() {
           pointerEvents="none"
           children={<SearchIcon color="gray.600" />}
         />
-        <Input type="text" placeholder="Search..." border="1px solid #949494" borderRadius='5px'/>
+        <Input type="text" placeholder="Search..." border="1px solid #949494" borderRadius='5px' focusBorderColor="$ShopifyGreen"/>
       </InputGroup>
       <HStack>
       <BellIcon w="24px" height="29px" color="$IconGrey"/>  

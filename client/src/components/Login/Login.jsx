@@ -19,7 +19,7 @@ const Login = () => {
             width="100vw"
             height="100vh"
             zIndex={9999}
-            bg="#008060"
+            bg="$ShopifyGreen"
             display="flex"
             justifyContent="center"
             alignItems="center"
@@ -53,7 +53,7 @@ const Login = () => {
 							display="flex"
 							justifyContent="center"
 							alignItems="center"
-							bg="#FFC96B"
+							bg="$Yellow"
 							borderRadius="full"
 							width="2.5rem"
 							height="2.5rem"
@@ -64,7 +64,7 @@ const Login = () => {
 						</Box>
 						<Flex direction="column" ml={4}>
 							<Text fontSize="md" as="b">Xquenda Andreev</Text>
-							<Text fontSize="xs" color="#828899">xquenda.andreev@gmail.com</Text>
+							<Text fontSize="xs" color="$Grey">xquenda.andreev@gmail.com</Text>
 						</Flex>
 					</Flex>
 
@@ -78,7 +78,7 @@ const Login = () => {
 						width="2.5rem"
 						height="2.5rem"
 					>
-						<AddIcon color="#828899"/>
+						<AddIcon color="$Grey"/>
 					</Box>
 						<Text ml={4}>Add Account</Text>
 					</Flex>
