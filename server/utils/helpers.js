@@ -7,23 +7,20 @@ const readDetailedData = () =>{
 }
 
 
-const makeMod = (name, date) =>{
+const makeMod = (name, start) =>{
     let lessons=[];
     const mod =
     {
         name, 
-        date,
+        start,
         lessons,
     }
     return mod;
 }
 
-const addMod = (name, date) =>{
-
-
-    const createdMod = makeMod(name, date);
+const addMod = (name, start) =>{
+    const createdMod = makeMod(name, start);
     const detailedData = readDetailedData();
-  
     detailedData.push(createdMod);
     fs.writeFileSync('./data/Makemodules.json', JSON.stringify(detailedData, null, 2));
 }
@@ -37,13 +34,12 @@ const findModuleIndex = (moduleName) => {
 }
 
 const addLessons = (lesson, name) =>{
-    let search = name;
-    search = search.replace( /[^0-9](?=[0-9])/g, '$& ');
-    let moduleIndex = findModuleIndex(search); 
+    let moduleIndex = findModuleIndex(name); 
     const detailedData = readDetailedData();
     detailedData[moduleIndex].lessons.push(lesson);
     return fs.writeFileSync('./data/Makemodules.json', JSON.stringify(detailedData, null, 2));
 }
+
 
 module.exports = {
     readDetailedData,

@@ -8,8 +8,6 @@ const ModuleCard = ({name, start})=>{
 
     let trimmedname = name;
     let trimmedstart = start;
-    trimmedname = trimmedname.replace(/\s/g, '');
-    trimmedstart = trimmedstart.replace(/\s/g, '');
     let combinedLink = trimmedname+ "/" + trimmedstart;
 
     return (

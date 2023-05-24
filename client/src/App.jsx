@@ -14,6 +14,7 @@ import EditCourse from './components/EditCourse/EditCourse';
 import Stores from './components/Stores/Stores'
 import './App.scss';
 import NewLesson from './components/NewLesson/NewLesson';
+import AddTask from './components/AddTask/AddTask';
 
 
 
@@ -33,6 +34,8 @@ function App() {
             <Route path="/listcourses" element={<CoursesList />} />
             <Route path="/editCourse" element={<EditCourse />} />
             <Route path="/editCourse/:name/:start" element={<NewLesson />} />
+            <Route path="/editCourse/addTask" element={<AddTask />} />
+            
             <Route path="/products" element={<ProductsPage/>} />
           </Routes>
         </Box>

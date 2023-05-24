@@ -10,7 +10,7 @@ import {ArrowBackIcon} from '@chakra-ui/icons'
 import { NavLink, useParams} from "react-router-dom";
 import LessonList from "../LessonList/LessonList";
 
-
+//adding lesson
 
 function NewLesson() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -23,11 +23,9 @@ function NewLesson() {
         const lessonName = event.target[0].value;
         let lesson ={
             lessonName,
-            TypeOfTask: "",
-            TitleOfLecture: "",
-            Duration:"",
-            Material:""
+            tasks:{}
         }
+        
 
         if(lessonName.trim()  !== "" ){
             post = {

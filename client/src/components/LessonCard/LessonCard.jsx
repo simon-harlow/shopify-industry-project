@@ -1,26 +1,28 @@
-import React from "react";
-import { Flex, Card, Text, Link, Button, Image, Modal, FormLabel, Input, FormControl, FormHelperText, FormErrorMessage,
+import React, { useState } from "react";
+import { Link, Flex, Card, Text, Option, Button, Select, Modal, FormLabel, Input, FormControl, FormHelperText, FormErrorMessage,
     ModalContent,
     ModalHeader,
     ModalFooter,
     ModalBody,
     ModalCloseButton, ModalOverlay, useDisclosure, Textarea  } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import axios from 'axios';
 
+///adding task
 
 const LessonCard = ({lessonName})=>{
-
+    const { name, start } = useParams();
+    const [tasks, settasks] = useState([]);
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     function handleUploadForm(event){
         event.preventDefault();
         let post = {};
         const lessonTitle = event.target[0].value;
-        const lectureTitle = event.target[0].value;
-        const overview = event.target[0].value;
-        const duration = event.target[0].value;
-        const materialDeliver = event.target[0].value;
+        const lectureTitle = event.target[1].value;
+        const overview = event.target[2].value;
+        const duration = event.target[3].value;
+        const materialDeliver = event.target[4].value;
         let task ={
             lessonTitle,
             lectureTitle,
@@ -29,15 +31,15 @@ const LessonCard = ({lessonName})=>{
             materialDeliver
         }
 
-        if(lessonTitle.trim()  !== "" ){
+        if(lessonTitle.trim() && lectureTitle.trim() && overview.trim() &&duration.trim() && materialDeliver.trim() !== "" ){
             post = {
                 task,
                 lessonName,
             }
             axios
-            .post(`http://localhost:8080/editCourse/`, post)
-            .then(response =>{       
-
+            .post(`http://localhost:8080/editCourse/:name/:start/task`, post)
+            .then(response =>{     
+                settasks(response.data);
                 console.log(response.data);
             })
             .catch(error =>{
@@ -94,11 +96,18 @@ const LessonCard = ({lessonName})=>{
             id="new-note"
             onSubmit={handleUploadForm}
             >
+
             <FormControl pb="1rem">
-                <FormLabel>Title of Task</FormLabel>
-                <Input type="text" placeholder="Add Start Date" />
+                <FormLabel>Title of Lecture</FormLabel>
+                <Input type="text" placeholder="Fundamentals"/>
             </FormControl>
-            <FormControl>
+            <FormControl pb="1rem">
+                <FormLabel>Type of Task</FormLabel>
+                <Select placeholder='Select option'>
+                    <option value='option1'>Lecture</option>
+                </Select>
+            </FormControl>
+            <FormControl pb="1rem">
                 <FormLabel>Title of Lecture</FormLabel>
                 <Input type="text" placeholder="Fundamentals"/>
 
@@ -106,7 +115,6 @@ const LessonCard = ({lessonName})=>{
             <FormControl pb="1rem">
                 <FormLabel>Overview</FormLabel>
                 <Input type="text" placeholder="Body"/>
-
             </FormControl>
             <FormControl pb="1rem">
                 <FormLabel>Duration</FormLabel>
@@ -125,9 +133,10 @@ const LessonCard = ({lessonName})=>{
             <Button onClick={onClose} >
                 Cancel
             </Button>
-            <Button type="submit" form="new-note" bg="$ShopifyGreen" color="white">
+            <Link as={NavLink} to="/editCourse/addTask"><Button form="new-note" bg="$ShopifyGreen" color="white">
                 Create Task
             </Button>
+            </Link>
         </ModalFooter>
         </ModalContent>
         </Modal>

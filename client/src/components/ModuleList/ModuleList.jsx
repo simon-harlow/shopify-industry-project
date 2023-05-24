@@ -8,7 +8,7 @@ const ModuleList = ({list }) =>{
 
     return(
 
-            <Flex gap="1rem" >
+            <Flex gap="1rem" flexWrap="wrap">
                 {list.map((ex) =>(
                         <ModuleCard
                             key={ex.name}
