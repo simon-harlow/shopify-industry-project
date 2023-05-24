@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 
 const editCourses = require('./routes/editCourses');
 
-app.use('/editCourse', editCourses);
+app.use('/products/editCourse', editCourses);
 
 
 // Server Startup

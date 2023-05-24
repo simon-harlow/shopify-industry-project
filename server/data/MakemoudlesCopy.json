@@ -1,0 +1,59 @@
+[
+    {
+      "name": "Module 1",
+      "start": "Jan 1",
+      "lessons": [
+        {
+          "lessonName": "Lesson 1",
+          "tasks": {}
+        },
+        {
+          "lessonName": "Lesson 2",
+          "tasks": {}
+        },
+        {
+          "lessonName": "Lesson 3",
+          "tasks": {}
+        },
+        {
+          "lessonName": "Lesson 4",
+          "tasks": {}
+        }
+      ]
+    },
+    {
+      "name": "Module 2",
+      "start": "Jan 3",
+      "lessons": [
+        {
+          "lessonName": "Lesson 1",
+          "tasks": {}
+        }
+      ]
+    },
+    {
+      "name": "Module 3",
+      "start": "Jan 5",
+      "lessons": []
+    },
+    {
+      "name": "Module 4",
+      "start": "Jan 7",
+      "lessons": []
+    },
+    {
+      "name": "Module 5",
+      "start": "Jan 10",
+      "lessons": []
+    },
+    {
+      "name": "Module 6",
+      "start": "Jan 13",
+      "lessons": []
+    },
+    {
+      "name": "Module 1",
+      "start": "Jan 1",
+      "lessons": []
+    }
+  ]

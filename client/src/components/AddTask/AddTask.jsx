@@ -1,17 +1,9 @@
-import React, {useState, useEffect} from "react";
-import axios from 'axios';
-import { Flex, Button, Card, Text, Image, Box, Link, Select, Modal, FormLabel, Input, FormControl, FormHelperText, FormErrorMessage,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-    ModalCloseButton, ModalOverlay, useDisclosure  } from "@chakra-ui/react";
-import {ArrowBackIcon, ChevronDownIcon} from '@chakra-ui/icons'
-import { NavLink, useParams} from "react-router-dom";
-import LessonCard from "../LessonCard/LessonCard";
+import React  from "react";
+import { Flex, Button, Card, Text, Link, Select, } from "@chakra-ui/react";
+import {ArrowBackIcon, ChevronDownIcon, CloseIcon} from '@chakra-ui/icons'
+import { NavLink } from "react-router-dom";
 
-//adding lesson
-
+ 
 function AddTask() {
 
 
@@ -19,7 +11,7 @@ function AddTask() {
         <Flex direction="column">
             <Flex justifyContent="space-between" borderBottom="1px solid grey" paddingBottom="20px" marginBottom="20px">
                 <Flex>
-                    <Link as={NavLink} to="/editCourse" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon/> </Link> 
+                    <Link as={NavLink} to="/products/editCourse" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon/> </Link> 
                     <Flex direction="column" alignSelf="center">
                         <Text  fontWeight="700" fontSize="20px" lineHeight="24px">Module 1</Text>
                         <Text  fontWeight="700" fontSize="20px" lineHeight="24px">Jan 1</Text>
@@ -48,7 +40,10 @@ function AddTask() {
                         </Text>
                     </Flex>
                     <Flex margin=" 1rem 0" bg="$InputBackground"  flexDirection="column">
-                        <Text fontSize="1rem" padding="1rem">Fundamentals</Text>
+                        <Flex justifyContent="space-between">
+                            <Text fontSize="1rem" padding="1rem">Fundamentals</Text> 
+                            <CloseIcon justifyContent="center" alignSelf="center" marginRight="1rem"/>
+                        </Flex>
                         <Text fontSize="0.9rem" padding="1rem">View Content <ChevronDownIcon/></Text>
                     </Flex>    
                     <Flex gap="1rem" justifyContent="flex-end">

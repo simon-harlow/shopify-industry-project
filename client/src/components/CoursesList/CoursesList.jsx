@@ -118,7 +118,7 @@ function CoursesList() {
 								<Text fontSize="xl" fontWeight="bold" mb={2}>
 									Beginner Spanish Course
 								</Text>
-								<Link as={NavLink} to="/editCourse">
+								<Link as={NavLink} to="/products/editCourse">
 									<Text
 										fontSize="xl"
 										fontWeight="bold"

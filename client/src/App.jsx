@@ -29,13 +29,12 @@ function App() {
             <Route path="/" element={<Navigate to="/login" />} />
             <Route path="/login" element={<Login />} />
             <Route path="/stores" element={<Stores />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/courses/new" element={<CourseForm />} />
-            <Route path="/listcourses" element={<CoursesList />} />
-            <Route path="/editCourse" element={<EditCourse />} />
-            <Route path="/editCourse/:name/:start" element={<NewLesson />} />
-            <Route path="/editCourse/addTask" element={<AddTask />} />
-            
+            <Route path="/products/courses" element={<Courses />} />
+            <Route path="/products/courses/new" element={<CourseForm />} />
+            <Route path="/products/listcourses" element={<CoursesList />} />
+            <Route path="/products/editCourse" element={<EditCourse />} />
+            <Route path="/products/editCourse/:name/:start" element={<NewLesson />} />
+            <Route path="/products/editCourse/addTask" element={<AddTask />} />
             <Route path="/products" element={<ProductsPage/>} />
           </Routes>
         </Box>

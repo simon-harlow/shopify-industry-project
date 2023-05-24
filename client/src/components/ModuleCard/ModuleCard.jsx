@@ -24,7 +24,7 @@ const ModuleCard = ({name, start})=>{
                         <Text fontSize="xl" fontWeight="bold" mb={2}>
                             {name}
                         </Text>
-                        <Link as={NavLink} to="/editCourse">
+                        <Link as={NavLink} to={combinedLink}>
                         <Text fontSize="xl" fontWeight="bold" mb={2}>
                             ...
                         </Text>

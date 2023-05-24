@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
-import { Flex, Button, Card, Text, Image, Box, Link, Select, Modal, FormLabel, Input, FormControl, FormHelperText, FormErrorMessage,
+import { Flex, Button, Text ,Link, Select, Modal, FormLabel, Input, FormControl,
     ModalContent,
     ModalHeader,
     ModalFooter,
@@ -10,7 +10,6 @@ import {ArrowBackIcon} from '@chakra-ui/icons'
 import { NavLink, useParams} from "react-router-dom";
 import LessonList from "../LessonList/LessonList";
 
-//adding lesson
 
 function NewLesson() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -26,35 +25,32 @@ function NewLesson() {
             tasks:{}
         }
         
-
         if(lessonName.trim()  !== "" ){
             post = {
                 lesson,
                 name
             }
             axios
-            .post(`http://localhost:8080/editCourse/addlessons`, post)
+            .post(`http://localhost:8080/products/editCourse/addlessons`, post)
             .then(response =>{       
                 setLessonList(response.data);
-                console.log(lessonList);
             })
             .catch(error =>{
                 console.log(error);
             });
             event.target[0].value = "";
-            alert(" has successfully been uploaded");
+            alert(lessonName + " has successfully been uploaded");
         }
     }
     
     useEffect(()=>{
         axios
-          .get(`http://localhost:8080/editCourse/${name}/${start}`)
+          .get(`http://localhost:8080/products/editCourse/${name}/${start}`)
           .then((response) => {
             setLessonList(response.data);
-            console.log(response.data);
           })
           .catch((err) => {
-            console.log('Error fetching expenses:', err);
+            console.log('Error fetching lessons:', err);
           });
     },[]);
 
@@ -62,7 +58,7 @@ function NewLesson() {
         <Flex direction="column">
             <Flex justifyContent="space-between" borderBottom="1px solid grey" paddingBottom="20px" marginBottom="20px">
                 <Flex>
-                    <Link as={NavLink} to="/editCourse" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon/> </Link> 
+                    <Link as={NavLink} to="/products/editCourse" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon/> </Link> 
                     <Flex direction="column" alignSelf="center">
                         <Text  fontWeight="700" fontSize="20px" lineHeight="24px">{name}</Text>
                         <Text  fontWeight="700" fontSize="20px" lineHeight="24px">{start}</Text>
@@ -110,7 +106,7 @@ function NewLesson() {
 
                 <ModalFooter gap="1rem">
                     <Button>Cancel</Button>
-                    <Button type="submit" form="new-note" bg="$ShopifyGreen" color="white">
+                    <Button type="submit" form="new-note" bg="$ShopifyGreen" color="white" onClick={onClose}>
                     Create Lesson
                     </Button>
                 </ModalFooter>
