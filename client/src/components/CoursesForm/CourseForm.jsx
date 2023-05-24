@@ -7,7 +7,7 @@ import { ArrowBackIcon } from '@chakra-ui/icons'
 function CourseForm() {
 
     const navigate = useNavigate();
-    const handleCreateCourseClick = () => navigate(`/listcourses`)
+    const handleCreateCourseClick = () => navigate(`/products/listcourses`)
 
 	return (
         <>

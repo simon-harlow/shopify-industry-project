@@ -15,42 +15,6 @@ const LessonCard = ({lessonName})=>{
     const [tasks, settasks] = useState([]);
     const { isOpen, onOpen, onClose } = useDisclosure()
 
-    function handleUploadForm(event){
-        event.preventDefault();
-        let post = {};
-        const lessonTitle = event.target[0].value;
-        const lectureTitle = event.target[1].value;
-        const overview = event.target[2].value;
-        const duration = event.target[3].value;
-        const materialDeliver = event.target[4].value;
-        let task ={
-            lessonTitle,
-            lectureTitle,
-            overview,
-            duration,
-            materialDeliver
-        }
-
-        if(lessonTitle.trim() && lectureTitle.trim() && overview.trim() &&duration.trim() && materialDeliver.trim() !== "" ){
-            post = {
-                task,
-                lessonName,
-            }
-            axios
-            .post(`http://localhost:8080/editCourse/:name/:start/task`, post)
-            .then(response =>{     
-                settasks(response.data);
-                console.log(response.data);
-            })
-            .catch(error =>{
-                console.log(error);
-            });
-            event.target[0].value = "";
-            alert(" has successfully been uploaded");
-        }
-    }
-    
-
 
     return (
         <>
@@ -94,7 +58,6 @@ const LessonCard = ({lessonName})=>{
         <ModalBody>
             <form
             id="new-note"
-            onSubmit={handleUploadForm}
             >
 
             <FormControl pb="1rem">
@@ -133,7 +96,7 @@ const LessonCard = ({lessonName})=>{
             <Button onClick={onClose} >
                 Cancel
             </Button>
-            <Link as={NavLink} to="/editCourse/addTask"><Button form="new-note" bg="$ShopifyGreen" color="white">
+            <Link as={NavLink} to="/products/editCourse/addTask"><Button form="new-note" bg="$ShopifyGreen" color="white">
                 Create Task
             </Button>
             </Link>

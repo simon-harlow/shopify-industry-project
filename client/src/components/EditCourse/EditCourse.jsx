@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from 'axios';
-import { Flex, Button, Card, Text, Image, Box, Link, Select,   Modal, FormLabel, Input, FormControl, FormHelperText, FormErrorMessage,
+import { Flex, Button, Text, Image, Box, Link, Select,   Modal,  Input, FormControl, FormHelperText, FormErrorMessage,
     ModalContent,
     ModalHeader,
     ModalFooter,
@@ -18,17 +18,14 @@ function EditCourse() {
 
     useEffect(()=>{
         axios
-          .get('http://localhost:8080/editCourse')
+          .get('http://localhost:8080/products/editCourse')
           .then((response) => {
             setModule(response.data);
-            console.log(response.data);
           })
           .catch((err) => {
             console.log('Error fetching expenses:', err);
           });
     },[]);
-
-
 
     function handleUploadForm(event){
         event.preventDefault();
@@ -42,16 +39,16 @@ function EditCourse() {
                 start
             }
             axios
-            .post(`http://localhost:8080/editCourse`, post)
-            .then(response =>{       
-                console.log(response);
+            .post(`http://localhost:8080/products/editCourse`, post)
+            .then(response =>{      
+                setModule(response.data); 
             })
             .catch(error =>{
                 console.log(error);
             });
             event.target[0].value = "";
             event.target[1].value = "";
-            alert(" has successfully been uploaded");
+            alert(name +" has successfully been uploaded");
         }
     }
 
@@ -59,9 +56,9 @@ function EditCourse() {
         <Flex direction="column">
         <Flex justifyContent="space-between" borderBottom="1px solid grey" paddingBottom="20px" marginBottom="20px">
             <Flex>
-                <Link as={NavLink} to="/listcourses" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon/> </Link> 
+                <Link as={NavLink} to="/products/listcourses" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon/> </Link> 
                 <Flex direction="column" alignSelf="center">
-                    <Text  fontWeight="700" fontSize="20px" lineHeight="24px">Courses: Beginner Language</Text>
+                    <Text  fontWeight="700" fontSize="20px" lineHeight="24px">Courses: Beginner Spanish Course</Text>
                 </Flex>
             </Flex>
             <Flex gap="1rem">
@@ -129,7 +126,7 @@ function EditCourse() {
           </ModalBody>
 
           <ModalFooter>
-            <Button type="submit" form="new-note">
+            <Button type="submit" form="new-note" onClick={onClose}>
               Edit Section
             </Button>
           </ModalFooter>

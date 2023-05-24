@@ -1,26 +1,3 @@
 [
-  {
-    "name": "module 1",
-    "start": "Jan 1",
-    "lessons": [
-      {
-        "lessonName": "random lesson",
-        "tasks": []
-      },
-      {
-        "lessonName": "something",
-        "tasks": {}
-      }
-    ]
-  },
-  {
-    "name": "module 2",
-    "start": "jan 3",
-    "lessons": [
-      {
-        "lessonName": "Lesson 1",
-        "tasks": {}
-      }
-    ]
-  }
+  
 ]

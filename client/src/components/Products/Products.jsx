@@ -11,13 +11,13 @@ import Print from "../../assets/images/PrintOnDemand.png"
 const ProductsPage = () => {
 
     return(
-        <Flex h="100vh" display="flex" alignContent="center" justifyContent="center">
+        <Flex h="50vh" display="flex" alignContent="center" justifyContent="center">
             <HStack gap="1rem" >
-                <ProductItem img={DigitalProduct}  title={"Digital Product"} link={'/digitalproduct'}/>
-                <ProductItem img={Dropshipping}  title={"Drop Shipping"} link={'/dropshipping'}/>
-                <ProductItem img={HandMade}  title={"Handmade and Crafts"} link={'/handmadeandcrafts'}/>
-                <ProductItem img={Print}  title={"Print On Demand"} link={'/printOnDemand'}/>
-                <ProductItem img={CoursesImg}  title={"Courses"} link={'/courses'}/>
+                <ProductItem img={DigitalProduct}  title={"Digital Product"} link={'/products/digitalproduct'}/>
+                <ProductItem img={Dropshipping}  title={"Drop Shipping"} link={'/products/dropshipping'}/>
+                <ProductItem img={HandMade}  title={"Handmade and Crafts"} link={'/products/handmadeandcrafts'}/>
+                <ProductItem img={Print}  title={"Print On Demand"} link={'/products/printOnDemand'}/>
+                <ProductItem img={CoursesImg}  title={"Courses"} link={'/products/courses'}/>
             </HStack>
         </Flex>
     );

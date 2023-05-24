@@ -44,7 +44,7 @@ function SideBar() {
                     <ChevronRightIcon />
                 </Link>
                 <NavItem icon={EmailShopify} title={"Shopify Email"}  link={"/shopifyemail"}/>
-                <NavItem icon={SearchShopify} title={"Shopify Search &"}  link={"/shopifysearch"}/>
+                <NavItem icon={SearchShopify} title={"Shopify Search & Dis..."}  link={"/shopifysearch"}/>
                 <NavItem icon={FlowShopify} title={"Shopify Flow"} link={"/shopifyflow"}/>
             </Flex>
         </Flex>
@@ -71,7 +71,7 @@ export default SideBar;
                 >
                 <MenuButton>
                     <Flex alignItems="center">
-                        <Icon as={icon} marginLeft="1rem" marginRight="11px"/>
+                        <Icon as={icon}  marginLeft="1rem" marginRight="11px"/>
                         <Text lineHeight="20px" fontWeight="500" fontSize="14px" >{title}</Text>
                     </Flex>
                 </MenuButton>
