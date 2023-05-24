@@ -33,7 +33,7 @@ const ModuleCard = ({name, start})=>{
                         <Text mb={4}>{start}</Text>
                         <Flex gap="1rem" justifyContent="space-between">
                         
-                            <Button color="white" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem" border="1px solid black" padding="0 1rem" borderRadius="5px" bg="$ShopifyGreen" >
+                            <Button color="white" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem"  padding="0 1rem" borderRadius="5px" bg="$ShopifyGreen" >
                                 Publish
                             </Button>                            
                        

@@ -99,31 +99,31 @@ const LessonCard = ({lessonName})=>{
 
             <FormControl pb="1rem">
                 <FormLabel>Title of Lecture</FormLabel>
-                <Input type="text" placeholder="Fundamentals"/>
+                <Input type="text" placeholder="Fundamentals" focusBorderColor="$ShopifyGreen"/>
             </FormControl>
             <FormControl pb="1rem">
                 <FormLabel>Type of Task</FormLabel>
-                <Select placeholder='Select option'>
+                <Select placeholder='Select option' focusBorderColor="$ShopifyGreen">
                     <option value='option1'>Lecture</option>
                 </Select>
             </FormControl>
             <FormControl pb="1rem">
                 <FormLabel>Title of Lecture</FormLabel>
-                <Input type="text" placeholder="Fundamentals"/>
+                <Input type="text" placeholder="Fundamentals" focusBorderColor="$ShopifyGreen"/>
 
             </FormControl>
             <FormControl pb="1rem">
                 <FormLabel>Overview</FormLabel>
-                <Input type="text" placeholder="Body"/>
+                <Input type="text" placeholder="Body" focusBorderColor="$ShopifyGreen"/>
             </FormControl>
             <FormControl pb="1rem">
                 <FormLabel>Duration</FormLabel>
-                <Input type="text" placeholder="hh:mm"/>
+                <Input type="text" placeholder="hh:mm" focusBorderColor="$ShopifyGreen"/>
 
             </FormControl>
             <FormControl pb="1rem">
                 <FormLabel>Material Delivery</FormLabel>
-                <Textarea type="text" placeholder="Add Description"/>
+                <Textarea type="text" placeholder="Add Description" focusBorderColor="$ShopifyGreen"/>
 
             </FormControl>
             </form>

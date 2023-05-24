@@ -121,8 +121,8 @@ function EditCourse() {
               onSubmit={handleUploadForm}
             >
               <FormControl>
-                <Input type="text" placeholder="Module 1" marginBottom="1rem"/>
-                <Input type="text" placeholder="Add Start Date"/>
+                <Input type="text" placeholder="Module 1" marginBottom="1rem" focusBorderColor="$ShopifyGreen"/>
+                <Input type="text" placeholder="Add Start Date" focusBorderColor="$ShopifyGreen"/>
 
               </FormControl>
             </form>
