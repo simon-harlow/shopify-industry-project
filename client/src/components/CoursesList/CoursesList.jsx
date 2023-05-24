@@ -17,6 +17,7 @@ import {
 	useDisclosure,
 	useToast,
 } from "@chakra-ui/react";
+import Confetti from 'react-confetti';
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
 import checked from "../../assets/images/Checkered.png";
@@ -26,7 +27,7 @@ function CoursesList() {
 	const finalRef = useRef(null);
 	const toast = useToast();
 	const [isPublished, setPublished] = useState(false);
-    console.log("is Published bool",isPublished);
+    const [confettiActive, setConfettiActive] = useState(false);
 
 	const handlePublish = () => {
 		onClose();
@@ -38,11 +39,21 @@ function CoursesList() {
 			duration: 5000,
 			isClosable: true,
 		});
+        setConfettiActive(true);
 	};
 
 	return (
 		<>
 			<Flex direction="column">
+            {confettiActive && (
+                    <Confetti
+                    width={window.innerWidth}
+                    height={window.innerHeight}
+                    recycle={false}
+                    numberOfPieces={400}
+                    onConfettiComplete={() => setConfettiActive(false)}
+                    />
+                )}
 				<Flex
 					justifyContent="space-between"
 					borderBottom="1px solid grey"
@@ -52,7 +63,7 @@ function CoursesList() {
 					<Flex>
 						<Link
 							as={NavLink}
-							to="/listcourses"
+							to="/products"
 							padding="8px"
 							border="1px solid silver"
 							borderRadius="5px"

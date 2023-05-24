@@ -81,7 +81,7 @@ function NewLesson() {
             {lessonList && <LessonList list={lessonList}/>}
 
             <Flex  width="50%" margin="auto" marginTop="20%" direction="column" >
-                <Text textAlign="center" marginBottom="20px">Get started on building your course y adding lessons!</Text>
+                <Text textAlign="center" marginBottom="20px">Get started on building your course by adding lessons!</Text>
                 <Flex width="100%" justifyContent="space-around">
                 <Button bg="$ShopifyGreen" color="white" onClick={onOpen}>Add Lesson</Button>
                 <Text>Or</Text>
@@ -103,7 +103,7 @@ function NewLesson() {
                     >
                     <FormControl>
                         <FormLabel>Title of Lesson</FormLabel>
-                        <Input type="text" placeholder="Lesson 1" marginBottom="1rem"/>
+                        <Input type="text" placeholder="Lesson 1" marginBottom="1rem" focusBorderColor="$ShopifyGreen"/>
                     </FormControl>
                     </form>
                 </ModalBody>
