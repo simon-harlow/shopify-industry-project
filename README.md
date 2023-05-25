@@ -1,7 +1,7 @@
-# shopify-industry-project
+# Shopify Industry Project
 
 **Contents**
-- [shopify-industry-project](#shopify-industry-project)
+- [Shopify Industry Project](#shopify-industry-project)
   - [📝 Description](#-description)
   - [⭐ Features](#-features)
   - [🧰 Tech Stack](#-tech-stack)
