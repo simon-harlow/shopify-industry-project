@@ -43,7 +43,7 @@ function CourseForm() {
                             Name of Course
                         </Text>
                         <Text mt={2}>
-                            Beginner Language Course
+                            Beginner Spanish Course
                         </Text>
                     </Flex>
 

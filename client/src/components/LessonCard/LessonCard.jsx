@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Flex, Card, Text, Option, Button, Select, Modal, FormLabel, Input, FormControl, FormHelperText, FormErrorMessage,
+import { Link, Flex, Box, Card, Text, Option, Button, Select, Modal, FormLabel, Input, FormControl, FormHelperText, FormErrorMessage,
     ModalContent,
     ModalHeader,
     ModalFooter,
@@ -34,14 +34,9 @@ const LessonCard = ({lessonName})=>{
                             <Button color="black" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem"  padding="0 1rem" borderRadius="5px" bg="transparent">
                                 Import Task
                             </Button>
-                                                 
-                       
-                 
-                            <Button onClick={onOpen} color="white" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem" border="1px solid black" padding="0 1rem" borderRadius="5px" bg="$ShopifyGreen" >
+                            <Button onClick={onOpen} color="white" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem" padding="0 1rem" borderRadius="5px" bg="$ShopifyGreen" >
                                 Add Task
                             </Button>   
-                   
-                       
                     </Flex>
                 </Flex>
             </Flex>
@@ -61,14 +56,10 @@ const LessonCard = ({lessonName})=>{
             <form
             id="new-note"
             >
-
+            <Text fontSize="16px" color="black" fontWeight="700" mb={6}>Task</Text>
             <FormControl pb="1rem">
-                <FormLabel>Title of Lecture</FormLabel>
-                <Input type="text" placeholder="Fundamentals" focusBorderColor="$ShopifyGreen"/>
-            </FormControl>
-            <FormControl pb="1rem">
-                <FormLabel>Type of Task</FormLabel>
-                <Select placeholder='Select option' focusBorderColor="$ShopifyGreen">
+                <FormLabel>Content Type</FormLabel>
+                <Select placeholder='Select option' focusBorderColor="$ShopifyGreen" width="50%">
                     <option value='option1'>Lecture</option>
                 </Select>
             </FormControl>
@@ -78,8 +69,8 @@ const LessonCard = ({lessonName})=>{
 
             </FormControl>
             <FormControl pb="1rem">
-                <FormLabel>Overview</FormLabel>
-                <Input type="text" placeholder="Body" focusBorderColor="$ShopifyGreen"/>
+                <FormLabel>Description</FormLabel>
+                <Input type="text" placeholder="Write brief overview of the lecture..." focusBorderColor="$ShopifyGreen"/>
             </FormControl>
             <FormControl pb="1rem">
                 <FormLabel>Duration</FormLabel>
@@ -87,20 +78,22 @@ const LessonCard = ({lessonName})=>{
 
             </FormControl>
             <FormControl pb="1rem">
-                <FormLabel>Material Delivery</FormLabel>
-                <Textarea type="text" placeholder="Add Description" focusBorderColor="$ShopifyGreen"/>
+                <FormLabel>Lecture Media</FormLabel>
+                <Flex w="100%" h="61px" bg="#F2F7FE" borderRadius="5px" border="2px dashed #2C6ECB" mb={3} justify="center" align="center" color="#2C6ECB">Drop files to upload</Flex>
+                <Textarea type="text" placeholder="or type lecture content here..." focusBorderColor="$ShopifyGreen" resize="none"/>
 
             </FormControl>
             </form>
         </ModalBody>
 
-        <ModalFooter>
-            <Button onClick={onClose} >
+        <ModalFooter >
+            <Button onClick={onClose} mr="1rem">
                 Cancel
             </Button>
-            <Link as={NavLink} to="/products/editCourse/addTask"><Button form="new-note" bg="$ShopifyGreen" color="white">
-                Create Task
-            </Button>
+            <Link as={NavLink} to="/products/editCourse/addTask">
+                <Button form="new-note" bg="$ShopifyGreen" color="white" _hover={{ bg: "", boxShadow: "lg" }}>
+                    Create Task
+                </Button>
             </Link>
         </ModalFooter>
         </ModalContent>

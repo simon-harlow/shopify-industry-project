@@ -21,6 +21,7 @@ import Confetti from 'react-confetti';
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
 import checked from "../../assets/images/Checkered.png";
+import { EditPencil } from "../../assets/modifiedIcon";
 
 function CoursesList() {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -87,6 +88,7 @@ function CoursesList() {
 							textAlign="center"
 							bg="transparent"
 							fontWeight="700"
+							cursor="default"
 							_hover={{ bg: "", boxShadow: "lg" }}
 						>
 							Edit
@@ -124,7 +126,7 @@ function CoursesList() {
 										fontWeight="bold"
 										mb={2}
 									>
-										...
+										<EditPencil/>
 									</Text>
 								</Link>
 							</Flex>
@@ -151,19 +153,9 @@ function CoursesList() {
 									{isPublished ? "Published" : "Publish"}
 								</Button>
 
-								<Button
-									color="black"
-									_hover={{ bg: "" }}
-									boxShadow="md"
-									w="fit-content"
-									h="2rem"
-									padding="0 1rem"
-									borderRadius="5px"
-									bg="transparent"
-									cursor="default"
-								>
+								<Text color="gray" mr={4}>
 									Draft
-								</Button>
+								</Text>
 							</Flex>
 						</Flex>
 					</Flex>

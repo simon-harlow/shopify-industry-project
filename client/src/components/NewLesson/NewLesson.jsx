@@ -60,17 +60,16 @@ function NewLesson() {
                     <Link as={NavLink} to="/products/editCourse" padding="8px" border="1px solid silver" borderRadius="5px" marginRight="1rem"> <ArrowBackIcon/> </Link> 
                     <Flex direction="column" alignSelf="center">
                         <Text  fontWeight="700" fontSize="20px" lineHeight="24px">{name}</Text>
-                        <Text  fontWeight="700" fontSize="20px" lineHeight="24px">{start}</Text>
+                        <Link as={NavLink} to="/products/listcourses">
+                            <Text  fontWeight="700" fontSize="14px" lineHeight="20px" color="#2C6ECB" >Back to Courses</Text>
+                        </Link>
                     </Flex>
                 </Flex>
                 <Flex gap="1rem">
-                    <Button textAlign="center" bg="transparent" fontWeight="700">Edit</Button>
-                    <Select placeholder='More action' width="200px" fontWeight="700">
-                        <option value='option1'>Option 1</option>
-                        <option value='option2'>Option 2</option>
-                        <option value='option3'>Option 3</option>
+                    <Button textAlign="center" bg="transparent" fontWeight="700" cursor="default" _hover={{ bg: ""}}>Edit</Button>
+                    <Select placeholder='More actions' width="150px" fontWeight="700">
                     </Select>
-                    <Button textAlign="center" bg="$ShopifyGreen" color="white">+ Add New Courses</Button>
+                    <Button textAlign="center" bg="$ShopifyGreen" color="white" _hover={{ bg: "", boxShadow: "lg" }}>Save</Button>
                 </Flex>
             </Flex>
             {lessonList && <LessonList list={lessonList}/>}

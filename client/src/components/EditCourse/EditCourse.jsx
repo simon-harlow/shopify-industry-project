@@ -63,17 +63,14 @@ function EditCourse() {
             </Flex>
             <Flex gap="1rem">
                 <Button textAlign="center" bg="transparent" fontWeight="700">Edit</Button>
-                <Select placeholder='More action' width="200px" fontWeight="700">
-                    <option value='option1'>Option 1</option>
-                    <option value='option2'>Option 2</option>
-                    <option value='option3'>Option 3</option>
+                <Select placeholder='More actions' width="150px" fontWeight="700">
                 </Select>
                 
                 <Button textAlign="center" bg="$ShopifyGreen" color="white" onClick={onOpen}>+ Add New Module</Button>
                 
             </Flex>
         </Flex>
-        <Flex justifyContent="center">
+        <Flex justifyContent={!mods.length ? "center" : "flex-start"}>
 
 
 

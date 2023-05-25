@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Card, Text, Link, Button, Image} from "@chakra-ui/react";
 import illustration from '../../assets/images/Checkered.png'
 import { NavLink } from "react-router-dom";
+import { EditPencil } from "../../assets/modifiedIcon";
 
 
 const ModuleCard = ({name, start})=>{
@@ -26,23 +27,19 @@ const ModuleCard = ({name, start})=>{
                         </Text>
                         <Link as={NavLink} to={combinedLink}>
                         <Text fontSize="xl" fontWeight="bold" mb={2}>
-                            ...
+                            <EditPencil/>
                         </Text>
                         </Link>
                         </Flex>
                         <Text mb={4}>{start}</Text>
-                        <Flex gap="1rem" justifyContent="space-between">
+                        <Flex gap="1rem" justifyContent="space-between" align="center">
                         
                             <Button color="white" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem"  padding="0 1rem" borderRadius="5px" bg="$ShopifyGreen" >
                                 Publish
                             </Button>                            
-                       
-                        <Link as={NavLink} to={combinedLink}>
-                            <Button color="black" _hover={{bg: ""}} boxShadow="md" w="fit-content" h="2rem"  padding="0 1rem" borderRadius="5px" bg="transparent">
+                            <Text color="gray" mr={4}>
                                 Draft
-                            </Button> 
-                            </Link>    
-                       
+                            </Text> 
                     </Flex>
                 </Flex>
             </Flex>
