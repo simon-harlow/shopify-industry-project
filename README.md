@@ -48,7 +48,7 @@ The App shows a useable example of how an entrepreneur could use the platform to
 
 #### UX Design
 
-* [Demetria Leung](www.demetrialeung.com)
+* [Demetria Leung](https://demetrialeung.com)
 * [Usra Abid](https://usra-design.squarespace.com/)
 
 #### Data Science
