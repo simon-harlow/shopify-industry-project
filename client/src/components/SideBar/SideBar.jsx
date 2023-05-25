@@ -1,7 +1,7 @@
 import { Flex, Text, Menu, Link, MenuButton,  Select, Icon } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
 import React from 'react';
-import { AnalyticsShopify, CustomersShopify, DiscountsShopify, EmailShopify, FinancesShopify, FlowShopify, HomeShopify, MarketingShopify, OnlineStoreShopify, OrdersShopify, PointOfSalesShopify, ProductsShopify, SearchShopify, ShopMinorShopify } from '../../assets/modifiedIcon';
+import { GearShopify, AnalyticsShopify, CustomersShopify, DiscountsShopify, EmailShopify, FinancesShopify, FlowShopify, HomeShopify, MarketingShopify, OnlineStoreShopify, OrdersShopify, PointOfSalesShopify, ProductsShopify, SearchShopify, ShopMinorShopify } from '../../assets/modifiedIcon';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
 
@@ -46,6 +46,9 @@ function SideBar() {
                 <NavItem icon={EmailShopify} title={"Shopify Email"}  link={"/shopifyemail"}/>
                 <NavItem icon={SearchShopify} title={"Shopify Search & Dis..."}  link={"/shopifysearch"}/>
                 <NavItem icon={FlowShopify} title={"Shopify Flow"} link={"/shopifyflow"}/>
+            </Flex>
+            <Flex position="fixed" bottom="0" margin="1rem 0">
+                <NavItem icon={GearShopify} title={"Settings"}  link={"/settings"}/>
             </Flex>
         </Flex>
     )
