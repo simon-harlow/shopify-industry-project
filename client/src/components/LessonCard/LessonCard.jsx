@@ -87,7 +87,7 @@ const LessonCard = ({lessonName})=>{
         </ModalBody>
 
         <ModalFooter >
-            <Button onClick={onClose} mr="1rem">
+            <Button onClick={onClose} mr="1rem" bg="white" color="black" border="1px solid #BABFC3">
                 Cancel
             </Button>
             <Link as={NavLink} to="/products/editCourse/addTask">
