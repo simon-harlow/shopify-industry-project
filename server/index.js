@@ -1,4 +1,5 @@
 const express = require('express')
+
 const app = express()
 require('dotenv').config();
 const PORT = process.env.PORT || 8080;
@@ -16,6 +17,9 @@ app.use((req, res, next) => {
 
 // Routes
 
+const editCourses = require('./routes/editCourses');
+
+app.use('/products/editCourse', editCourses);
 
 
 // Server Startup
