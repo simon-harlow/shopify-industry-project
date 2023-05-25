@@ -39,7 +39,6 @@ function NewLesson() {
                 console.log(error);
             });
             event.target[0].value = "";
-            alert(lessonName + " has successfully been uploaded");
         }
     }
     
@@ -85,8 +84,10 @@ function NewLesson() {
                 </Flex>
             </Flex>
 
-            <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay />
+            <Modal isOpen={isOpen} onClose={onClose}
+				isCentered
+			>
+				<ModalOverlay backdropFilter="auto" backdropBlur="2px" />
                 <ModalContent>
                 <ModalHeader>
                     <ModalCloseButton />

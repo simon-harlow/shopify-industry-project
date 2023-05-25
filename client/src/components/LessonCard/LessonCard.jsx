@@ -48,8 +48,10 @@ const LessonCard = ({lessonName})=>{
         </Card>
 
 
-        <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
+        <Modal isOpen={isOpen} onClose={onClose}
+				isCentered
+			>
+				<ModalOverlay backdropFilter="auto" backdropBlur="2px" />
         <ModalContent>
         <ModalHeader>
             <ModalCloseButton />
