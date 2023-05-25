@@ -48,7 +48,7 @@ function EditCourse() {
             });
             event.target[0].value = "";
             event.target[1].value = "";
-            alert(name +" has successfully been uploaded");
+
         }
     }
 
@@ -105,8 +105,10 @@ function EditCourse() {
 
         </Flex>
 
-        <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
+        <Modal isOpen={isOpen} onClose={onClose}	
+				isCentered
+			>
+				<ModalOverlay backdropFilter="auto" backdropBlur="2px" />
         <ModalContent>
           <ModalHeader>
             <ModalCloseButton />
